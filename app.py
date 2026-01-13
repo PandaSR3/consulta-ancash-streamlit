@@ -1,6 +1,19 @@
 import streamlit as st
 import pandas as pd
-
+st.set_page_config(
+    page_title="Consulta Ancash",
+    page_icon="icon.png",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+    
 # Configuración de la página para que se vea bien en celulares
 st.set_page_config(page_title="Consulta Ancash", layout="centered")
 
