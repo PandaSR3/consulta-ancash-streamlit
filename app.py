@@ -27,13 +27,52 @@ st.set_page_config(page_title="Consulta Ancash", layout="centered")
 
 # --- ESTILOS CSS PARA QUE PAREZCA UNA APP MÓVIL ---
 st.markdown("""
-    <style>
-    .big-font { font-size:20px !important; font-weight: bold; }
-    .success { color: #28a745; font-weight: bold; }
-    .danger { color: #dc3545; font-weight: bold; }
-    .card { background-color: #f0f2f6; padding: 20px; border-radius: 10px; margin-bottom: 10px; }
-    </style>
-    """, unsafe_allow_html=True)
+<style>
+/* Fondo general */
+html, body, [data-testid="stApp"] {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* Textos */
+h1, h2, h3, h4, h5, h6, p, span, div, label {
+    color: #111111 !important;
+}
+
+/* Inputs */
+input, textarea {
+    color: #111111 !important;
+    background-color: #ffffff !important;
+}
+
+/* Botones */
+button {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+}
+
+/* Tarjetas */
+.card {
+    background-color: #f8fafc;
+    color: #111111;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Estados */
+.success { color: #16a34a !important; font-weight: bold; }
+.danger { color: #dc2626 !important; font-weight: bold; }
+
+/* Ocultar branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
 
 # --- FUNCIÓN DE CARGA DE DATOS ---
 @st.cache_data
