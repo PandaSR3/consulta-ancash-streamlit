@@ -143,7 +143,7 @@ if buscar and dni_input:
                 except:
                     pass
 
-            st.markdown("### 🏢 Datos Comerciales (Grupo Horizonte)")
+            st.markdown("### 🏢 Data Grupo Horizonte")
 
             st.markdown(f"""
 <div class="card" style="border-left: 5px solid {'#dc2626' if color_condicion == 'danger' else '#16a34a'};">
