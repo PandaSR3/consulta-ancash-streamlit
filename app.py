@@ -142,13 +142,19 @@ if buscar and dni_input:
                     fecha_pago = pd.to_datetime(fecha_pago).strftime("%d/%m/%Y")
                 except:
                     pass
-
+            Año_venta = socio.get('AÑO VENTA', 'N/A')
+            if pd.notna(Año_venta):
+                try:
+                    Año_venta = pd.to_datetime(Año_venta).strftime("%d/%m/%Y")
+                except:
+                    pass
             st.markdown("### 🏢 Data Grupo Horizonte")
 
             st.markdown(f"""
 <div class="card" style="border-left: 5px solid {'#dc2626' if color_condicion == 'danger' else '#16a34a'};">
     <div><b>Cliente:</b> {socio.get('NOMBRE DEL SOCIO', 'N/A')}</div>
     <hr>
+    <div><b>Año de venta:</b> {Año_venta}</div>
     <div><b>Monto de venta:</b> S/ {socio.get('MONTO VENTA', '0.00')}</div>
     <div><b>Saldo de deuda:</b> S/ {socio.get('SALDO', '0.00')}</div>
     <div><b>Último pago:</b> {fecha_pago}</div>
